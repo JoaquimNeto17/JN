@@ -383,3 +383,104 @@ select option{
     min-height:135px;
   }
 }
+
+
+/* =========================================================
+   AJUSTES FINAIS DE RESPONSIVIDADE
+   ========================================================= */
+
+/* Tablet e celular: preserve a interface inteira nas capturas */
+@media (max-width: 760px) {
+  .project-media--shot img,
+  .portal-carousel .carousel-slide img {
+    object-fit: contain;
+    object-position: center;
+    background: #070708;
+  }
+
+  /* Área de toque maior no carrossel */
+  .carousel-controls button {
+    width: 42px;
+    height: 42px;
+    font-size: 21px;
+  }
+
+  .carousel-controls {
+    gap: 5px;
+    padding: 3px;
+  }
+
+  .carousel-count {
+    min-width: 42px;
+  }
+}
+
+/* Celulares médios: reduz o hero e organiza o contador */
+@media (max-width: 520px) {
+  h1 {
+    font-size: clamp(48px, 13vw, 64px);
+    line-height: 1.04;
+    letter-spacing: -.065em;
+  }
+
+  .whatsapp-message-box .label-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+
+  #counter {
+    width: 100%;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .contact {
+    padding: 25px 20px;
+  }
+
+  .contact::before {
+    left: 20px;
+  }
+
+  .whatsapp-send {
+    min-height: 52px;
+    padding-inline: 14px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 380px) {
+  .page {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  h1 {
+    font-size: clamp(42px, 13.5vw, 52px);
+  }
+
+  .contact {
+    padding: 22px 17px;
+  }
+
+  .contact::before {
+    left: 17px;
+  }
+
+  .carousel-slide figcaption {
+    max-width: calc(100% - 125px);
+    padding: 5px 7px;
+    font-size: 8px;
+  }
+
+  .carousel-controls button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .whatsapp-send {
+    font-size: 13px;
+    gap: 9px;
+  }
+}
