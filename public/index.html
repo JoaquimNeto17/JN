@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Joaquim Neto — Desenvolvimento web</title>
+  <meta name="description" content="Conheça os projetos de Joaquim Neto em web, educação e jogos. Veja o trabalho e entre em contato para criar seu site.">
+  <meta name="theme-color" content="#050505">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%23050505%27/%3E%3Cpath d=%27M42 14v25c0 8-4.8 12-12.4 12-6.5 0-10.3-3.2-11.7-8.7l8-2.1c.6 2.5 1.7 3.8 3.8 3.8 2.8 0 4.1-1.8 4.1-5.3V14H42Z%27 fill=%27%23D99A2B%27/%3E%3Ccircle cx=%2747%27 cy=%2748%27 r=%273.5%27 fill=%27%23F4C15D%27/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
+  <script src="vendor/gsap.min.js" defer></script>
+  <script src="vendor/ScrollTrigger.min.js" defer></script>
+  <script src="motion.js" defer></script>
+  <script type="module" src="background.js"></script>
+</head>
+<body>
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+<div class="ambient-background" aria-hidden="true"><canvas id="ambient-canvas"></canvas></div>
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<div class="page">
+  <header>
+    <a class="brand" href="#main" aria-label="Joaquim Neto, início">JN<span>.</span></a>
+    <span class="header-note">Joaquim Neto <span>/</span> Desenvolvedor web</span>
+    <nav class="header-nav" aria-label="Navegação principal"><a href="#projetos">Projetos</a><a class="contact-link" href="#contato">Fale sobre seu projeto <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <div class="profile-column">
+    <section class="intro" aria-labelledby="name">
+      <div class="intro-top"><span class="eyebrow">DESIGN & DESENVOLVIMENTO WEB</span></div>
+      <h1 id="name"><span>Seu negócio.</span><span>Seu próximo</span><span class="accent-line">site.</span></h1>
+      <div class="intro-bottom">
+        <p class="role">Uma presença digital com a sua identidade.</p>
+        <p class="bio">Sou Joaquim Neto, estudante de Análise e Desenvolvimento de Sistemas. Desenvolvo sites com foco em clareza, personalidade e facilidade de uso.</p>
+      </div>
+      <a class="project-cta" href="#contato">Vamos construir seu site <span aria-hidden="true">↗</span></a>
+      <a class="work-link" href="#projetos">Conheça meus projetos <span aria-hidden="true">↓</span></a>
+    </section>
+    
+      <section class="networks" aria-labelledby="networks-title">
+        <p class="eyebrow section-label">CÓDIGO, TRAJETÓRIA & CONTATO</p>
+        <h2 id="networks-title" class="sr-only">Conheça meu trabalho</h2>
+        
+        <div class="social-list">
+          <a class="social" id="github" href="https://github.com/JoaquimNeto17" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Joaquim Neto, abre em nova aba">
+            <span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.18c-3.2.69-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.95.1-.74.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.58.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.14v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg></span>
+            <span class="social-text"><strong>GitHub</strong><span>@JoaquimNeto17</span></span><span class="social-end" aria-hidden="true">↗</span>
+          </a>
+          <a class="social" id="linkedin" href="https://www.linkedin.com/in/joaquim-neto-01128339b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Joaquim Neto, abre em nova aba">
+            <span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.53v16.94c0 .85.69 1.53 1.55 1.53h16.9c.86 0 1.55-.68 1.55-1.53V3.53c0-.85-.69-1.53-1.55-1.53ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8v-4.65c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.78 1.21-1.78 2.46v4.73H9.52V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.79-1.52 2.99 0 3.57 1.97 3.57 4.53v5.24Z"/></svg></span>
+            <span class="social-text"><strong>LinkedIn</strong><span>Trajetória e conexões</span></span><span class="social-end" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="email-card"><div><span class="email-label">PREFERE E-MAIL?</span><a href="mailto:joaquim.neto.senai@gmail.com">joaquim.neto.senai@gmail.com</a></div><button type="button" id="copy-email" aria-label="Copiar endereço de e-mail" title="Copiar e-mail"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3"/></svg></button></div><p id="copy-status" class="copy-status" role="status"></p>
+      </section>
+    </div>
+      <section class="contact" id="contato" aria-labelledby="contact-title">
+        <p class="eyebrow section-label">VAMOS COMEÇAR</p>
+        <h2 id="contact-title">Qual é a<br>sua ideia<span>?</span></h2>
+        <p class="section-copy">Escreva sua mensagem e envie direto pelo WhatsApp.</p>
+
+        <div class="whatsapp-message-box">
+          <div class="label-row">
+            <label for="whatsapp-message">Sua mensagem</label>
+            <span id="counter" aria-live="polite">0 palavras • 0 / 1000 caracteres</span>
+          </div>
+
+          <textarea
+            id="whatsapp-message"
+            rows="6"
+            maxlength="1000"
+            placeholder="Olá, Joaquim! Vi seu portfólio e gostaria de conversar sobre um site..."
+            aria-describedby="whatsapp-help"
+          ></textarea>
+
+          <p class="whatsapp-help" id="whatsapp-help">
+            Ao continuar, a conversa será aberta no WhatsApp com a mensagem preenchida.
+          </p>
+
+          <button class="whatsapp-send" id="whatsapp-send" type="button" disabled>
+            <span class="whatsapp-send-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.7Z"/>
+                <path d="M8.4 8.1c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.7 1.7c.1.3.1.5-.1.7l-.5.6c-.2.2-.2.4-.1.6.5.9 1.2 1.7 2.1 2.2.2.1.4.1.6-.1l.7-.8c.2-.2.4-.3.7-.2l1.8.8c.3.1.4.3.4.6 0 .4-.2 1.3-.9 1.8-.6.5-1.4.7-2.3.5-1.2-.3-2.8-1-4.3-2.4-1.2-1.1-2.1-2.5-2.5-3.7-.4-1.1-.1-1.8.2-2.3Z"/>
+              </svg>
+            </span>
+            <span>Enviar pelo WhatsApp</span>
+            <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </section>
+  </main>
+  <section class="projects" id="projetos" aria-labelledby="projects-title">
+    <div class="projects-heading"><div><p class="eyebrow section-label">TRABALHOS SELECIONADOS / 01—03</p><h2 id="projects-title">Projetos que ganham vida<span>.</span></h2></div><p>Ideias colocadas em prática: interfaces, experiências educativas e soluções digitais.</p></div>
+    <div class="project-grid">
+      <article class="project-card project-card--portal">
+        <div class="project-media portal-carousel" aria-label="Capturas das atividades do Portal Acácio Piedade" tabindex="0">
+          <div class="carousel-slides">
+            <figure class="carousel-slide is-active"><img src="assets/portal-palavras.png" alt="Atividade de organizar letras para formar a palavra casa, com áudio e retorno de acerto" loading="lazy" width="955" height="673"><figcaption>01 / Formação de palavras</figcaption></figure>
+            <figure class="carousel-slide" aria-hidden="true"><img src="assets/portal-numeros.png" alt="Atividade de reconhecimento do número zero, com opção de ouvir e escolher a resposta" loading="lazy" width="1462" height="733"><figcaption>02 / Conhecendo os números</figcaption></figure>
+            <figure class="carousel-slide" aria-hidden="true"><img src="assets/portal-atividades.png" alt="Seleção de atividades: alfabeto, formação de palavras, números, rimas, sílabas e som inicial" loading="lazy" width="1461" height="732"><figcaption>03 / Atividades</figcaption></figure>
+            <figure class="carousel-slide" aria-hidden="true"><img src="assets/portal-acacio-login.jpg" alt="Tela inicial de entrada no Portal de Atividades da Escola Acácio Piedade" loading="lazy" width="1363" height="936"><figcaption>04 / Entrada no portal</figcaption></figure>
+            <figure class="carousel-slide" aria-hidden="true"><img src="assets/portal-acacio-recuperacao.jpg" alt="Tela para solicitar a recuperação de acesso à conta da professora" loading="lazy" width="1363" height="936"><figcaption>05 / Recuperação de senha</figcaption></figure>
+          </div>
+          <div class="carousel-controls"><button type="button" class="carousel-prev" aria-label="Captura anterior">←</button><span class="carousel-count" aria-live="polite">01 / 05</span><button type="button" class="carousel-next" aria-label="Próxima captura">→</button></div>
+        </div>
+        <div class="project-body"><p class="project-index">01 <span>EDUCAÇÃO / PORTAL</span></p><h3>Portal Acácio Piedade</h3><p>Um portal de atividades voltado à aprendizagem de crianças em fase de desenvolvimento, com foco no reconhecimento dos números e na formação de palavras.</p><a href="https://portal-acacio-piedade-topaz.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Portal Acácio Piedade em nova aba">Ver projeto <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="project-card">
+        <div class="project-media project-media--shot project-media--binho"><img src="assets/binho-ia.png" alt="Interface do protótipo Binho IA com conversa e campo para perguntar sobre celulares" loading="lazy" width="1477" height="733"></div>
+        <div class="project-body"><p class="project-index">02 <span>CONCEITO / CHATBOT</span></p><h3>Chatbot com IA</h3><p>Protótipo de assistente para explorar uma experiência de atendimento digital em uma loja de celulares.</p><p class="project-disclaimer">Projeto hipotético e independente. Não é um canal oficial da Binho Celulares.</p><a href="https://chat-bot-front-beta.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir protótipo de chatbot em nova aba">Explorar protótipo <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="project-card">
+        <div class="project-media project-media--shot project-media--geo-shot"><img src="assets/geo-mundo.png" alt="Partida do Geo Mundo com mapa das Américas e pergunta de múltipla escolha sobre a capital do Uruguai" loading="lazy" width="1475" height="732"></div>
+        <div class="project-body"><p class="project-index">03 <span>JOGO / GEOGRAFIA</span></p><h3>Geo Mundo</h3><p>Jogo desenvolvido para o TCC que estimula o conhecimento de geografia por meio de locais, vegetação, clima e fusos horários.</p><a href="https://geo-mundo.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir jogo Geo Mundo em nova aba">Jogar Geo Mundo <span aria-hidden="true">↗</span></a></div>
+      </article>
+    </div>
+    <div class="projects-outro"><p>Tem uma ideia para tirar do papel?</p><a href="#contato">Vamos conversar <span aria-hidden="true">↗</span></a></div>
+  </section>
+  <footer><span>© <span id="year">2026</span> Joaquim Neto</span><button class="background-toggle" id="background-toggle" type="button" aria-pressed="false" hidden>Pausar animação do fundo</button><a href="#main">Voltar ao topo <span aria-hidden="true">↑</span></a></footer>
+</div>
+</body>
+</html>
