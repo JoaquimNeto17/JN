@@ -484,3 +484,117 @@ select option{
     gap: 9px;
   }
 }
+
+
+/* =========================================================
+   CORREÇÕES DE ESPAÇAMENTO — CONTATO / MOBILE
+   ========================================================= */
+.contact h2{
+  max-width:100%;
+  text-wrap:balance;
+}
+
+@media (max-width:760px){
+  main{
+    gap:34px;
+  }
+
+  .contact{
+    padding:26px 22px;
+  }
+
+  .contact::before{
+    left:22px;
+  }
+
+  .contact .section-label{
+    margin-bottom:14px;
+  }
+
+  .contact h2{
+    font-size:clamp(34px,9.8vw,40px);
+    line-height:1.08;
+    letter-spacing:-.035em;
+  }
+
+  /* Mantém a quebra planejada: "Qual é a" / "sua ideia?" */
+  .contact h2 br{
+    display:block;
+  }
+
+  .section-copy{
+    max-width:none;
+    margin:14px 0 20px;
+    line-height:1.6;
+  }
+
+  .whatsapp-message-box{
+    margin-top:0;
+  }
+}
+
+@media (max-width:520px){
+  main{
+    gap:32px;
+  }
+
+  .contact{
+    padding:23px 19px;
+  }
+
+  .contact::before{
+    left:19px;
+  }
+
+  .contact .section-label{
+    margin-bottom:12px;
+    line-height:1.45;
+  }
+
+  .contact h2{
+    font-size:clamp(33px,9.5vw,38px);
+    line-height:1.1;
+    letter-spacing:-.03em;
+  }
+
+  .section-copy{
+    font-size:15px;
+    margin:12px 0 18px;
+  }
+
+  .whatsapp-message-box .label-row{
+    margin-bottom:7px;
+  }
+}
+
+@media (max-width:380px){
+  main{
+    gap:28px;
+  }
+
+  .contact{
+    padding:20px 16px;
+  }
+
+  .contact::before{
+    left:16px;
+  }
+
+  .contact h2{
+    font-size:clamp(31px,9.4vw,35px);
+  }
+
+  .contact .section-label{
+    margin-bottom:11px;
+  }
+}
+
+
+/* GSAP — linha de destaque do card de contato */
+.contact{
+  --contact-accent-scale:1;
+}
+.contact::before{
+  transform:scaleX(var(--contact-accent-scale));
+  transform-origin:left center;
+}
