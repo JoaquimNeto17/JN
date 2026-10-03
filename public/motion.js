@@ -167,56 +167,6 @@
         }
       });
 
-      gsap.utils.toArray('.project-card').forEach((card, index) => {
-        gsap.from(card, {
-          y: 64,
-          scale: 0.965,
-          opacity: 0,
-          duration: 0.88,
-          delay: (index % 3) * 0.10,
-          ease: 'power3.out',
-          clearProps: 'transform,opacity',
-          scrollTrigger: {
-            trigger: card,
-            start: 'top 90%',
-            toggleActions: 'play none none none'
-          }
-        });
-
-        const mediaElement = card.querySelector('.project-media img');
-        if (mediaElement) {
-          gsap.from(mediaElement, {
-            scale: 1.08,
-            duration: 1.15,
-            ease: 'power2.out',
-            clearProps: 'transform',
-            scrollTrigger: {
-              trigger: card,
-              start: 'top 90%',
-              toggleActions: 'play none none none'
-            }
-          });
-        }
-
-        const body = card.querySelector('.project-body');
-        if (body) {
-          gsap.from(body.children, {
-            y: 18,
-            opacity: 0,
-            duration: 0.55,
-            stagger: 0.07,
-            delay: 0.16 + (index % 3) * 0.06,
-            ease: 'power2.out',
-            clearProps: 'transform,opacity',
-            scrollTrigger: {
-              trigger: card,
-              start: 'top 88%',
-              toggleActions: 'play none none none'
-            }
-          });
-        }
-      });
-
       gsap.from('.projects-outro', {
         y: 34,
         opacity: 0,
@@ -242,6 +192,20 @@
           toggleActions: 'play none none none'
         }
       });
+    } else if ('IntersectionObserver' in window) {
+      // ScrollTrigger is optional: use a small native fallback for scroll reveals.
+      const targets = document.querySelectorAll('.projects-heading, .showcase, .projects-outro, footer');
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          revealObserver.unobserve(entry.target);
+          gsap.fromTo(entry.target, { y: 34, opacity: 0 }, {
+            y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', clearProps: 'transform,opacity'
+          });
+        });
+      }, { threshold: 0.08 });
+      targets.forEach(target => revealObserver.observe(target));
+      cleanups.push(() => revealObserver.disconnect());
     }
 
     /* =========================================================
@@ -285,32 +249,6 @@
         element.removeEventListener('focus', enter);
         element.removeEventListener('blur', leave);
         gsap.set(arrow, { clearProps: 'transform' });
-      });
-    });
-
-    /* Cards levantam um pouco mais no hover sem alterar o layout */
-    document.querySelectorAll('.project-card').forEach(card => {
-      const enter = () => gsap.to(card, {
-        y: -7,
-        duration: 0.28,
-        ease: 'power2.out',
-        overwrite: true
-      });
-
-      const leave = () => gsap.to(card, {
-        y: 0,
-        duration: 0.32,
-        ease: 'power2.out',
-        overwrite: true
-      });
-
-      card.addEventListener('pointerenter', enter);
-      card.addEventListener('pointerleave', leave);
-
-      cleanups.push(() => {
-        card.removeEventListener('pointerenter', enter);
-        card.removeEventListener('pointerleave', leave);
-        gsap.set(card, { clearProps: 'transform' });
       });
     });
 

@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Joaquim Neto — Desenvolvimento web</title>
-  <meta name="description" content="Conheça os projetos de Joaquim Neto em web, educação e jogos. Veja o trabalho e entre em contato para criar seu site.">
+  <meta name="description" content="Conheça seis projetos de Joaquim Neto, suas tecnologias e formas de contato para criar uma presença digital com personalidade.">
   <meta name="theme-color" content="#050505">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%23050505%27/%3E%3Cpath d=%27M42 14v25c0 8-4.8 12-12.4 12-6.5 0-10.3-3.2-11.7-8.7l8-2.1c.6 2.5 1.7 3.8 3.8 3.8 2.8 0 4.1-1.8 4.1-5.3V14H42Z%27 fill=%27%23D99A2B%27/%3E%3Ccircle cx=%2747%27 cy=%2748%27 r=%273.5%27 fill=%27%23F4C15D%27/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
   <script src="vendor/gsap.min.js" defer></script>
-  <script src="vendor/ScrollTrigger.min.js" defer></script>
   <script src="motion.js" defer></script>
+  <script src="skills.js" defer></script>
   <script type="module" src="background.js"></script>
+  <script type="module" src="showcase.js"></script>
 </head>
 <body>
 <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
@@ -20,7 +21,7 @@
   <header>
     <a class="brand" href="#main" aria-label="Joaquim Neto, início">JN<span>.</span></a>
     <span class="header-note">Joaquim Neto <span>/</span> Desenvolvedor web</span>
-    <nav class="header-nav" aria-label="Navegação principal"><a href="#projetos">Projetos</a><a class="contact-link" href="#contato">Fale sobre seu projeto <span aria-hidden="true">↗</span></a></nav>
+    <nav class="header-nav" aria-label="Navegação principal"><a href="#tecnologias">Tecnologias</a><a href="#projetos">Projetos</a><a class="contact-link" href="#contato">Fale sobre seu projeto <span aria-hidden="true">↗</span></a></nav>
   </header>
   <main id="main">
     <div class="profile-column">
@@ -88,30 +89,69 @@
         </div>
       </section>
   </main>
+  <section class="skills" id="tecnologias" aria-labelledby="skills-title">
+    <div class="skills-heading">
+      <div><p class="eyebrow section-label">STACK / TECNOLOGIAS</p><h2 id="skills-title">Ferramentas que uso<span>.</span></h2></div>
+      <div class="skills-side"><p>Linguagens, bibliotecas e plataformas presentes no meu trabalho.</p><button id="skills-toggle" class="skills-toggle" type="button" aria-pressed="false" aria-label="Pausar carrossel de tecnologias" hidden>Pausar <span aria-hidden="true">Ⅱ</span></button></div>
+    </div>
+    <div class="skills-viewport" role="region" aria-label="Carrossel de tecnologias utilizadas" tabindex="0">
+      <div class="skills-track" id="skills-track">
+        <ul class="skills-set">
+          <li class="tech-item"><img src="assets/tech/html5.svg" alt="" width="38" height="38"><span>HTML</span></li>
+          <li class="tech-item"><img src="assets/tech/css3.svg" alt="" width="38" height="38"><span>CSS</span></li>
+          <li class="tech-item"><img src="assets/tech/javascript.svg" alt="" width="38" height="38"><span>JavaScript</span></li>
+          <li class="tech-item"><img src="assets/tech/typescript.svg" alt="" width="38" height="38"><span>TypeScript</span></li>
+          <li class="tech-item"><img src="assets/tech/python.svg" alt="" width="38" height="38"><span>Python</span></li>
+          <li class="tech-item"><span class="tech-glyph tech-glyph--sql" aria-hidden="true">SQL</span><span>SQL</span></li>
+          <li class="tech-item"><img src="assets/tech/react.svg" alt="" width="38" height="38"><span>React</span></li>
+          <li class="tech-item"><img class="tech-logo--mono" src="assets/tech/nextjs.svg" alt="" width="38" height="38"><span>Next.js</span></li>
+          <li class="tech-item"><img src="assets/tech/tailwindcss.svg" alt="" width="38" height="38"><span>Tailwind CSS</span></li>
+          <li class="tech-item"><img class="tech-logo--mono" src="assets/tech/threejs.svg" alt="" width="38" height="38"><span>Three.js</span></li>
+          <li class="tech-item"><span class="tech-glyph tech-glyph--gsap" aria-hidden="true">GSAP</span><span>GSAP</span></li>
+          <li class="tech-item"><img src="assets/tech/firebase.svg" alt="" width="38" height="38"><span>Firebase</span></li>
+          <li class="tech-item"><img class="tech-logo--mono" src="assets/tech/expo.svg" alt="" width="38" height="38"><span>Expo</span></li>
+          <li class="tech-item"><span class="tech-glyph tech-glyph--powerbi" aria-hidden="true">BI</span><span>Power BI</span></li>
+          <li class="tech-item"><img src="assets/tech/git.svg" alt="" width="38" height="38"><span>Git</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="skills-hint">Passe o cursor para pausar; no celular, deslize para explorar.</p>
+  </section>
   <section class="projects" id="projetos" aria-labelledby="projects-title">
-    <div class="projects-heading"><div><p class="eyebrow section-label">TRABALHOS SELECIONADOS / 01—03</p><h2 id="projects-title">Projetos que ganham vida<span>.</span></h2></div><p>Ideias colocadas em prática: interfaces, experiências educativas e soluções digitais.</p></div>
-    <div class="project-grid">
-      <article class="project-card project-card--portal">
-        <div class="project-media portal-carousel" aria-label="Capturas das atividades do Portal Acácio Piedade" tabindex="0">
-          <div class="carousel-slides">
-            <figure class="carousel-slide is-active"><img src="assets/portal-palavras.png" alt="Atividade de organizar letras para formar a palavra casa, com áudio e retorno de acerto" loading="lazy" width="955" height="673"><figcaption>01 / Formação de palavras</figcaption></figure>
-            <figure class="carousel-slide" aria-hidden="true"><img src="assets/portal-numeros.png" alt="Atividade de reconhecimento do número zero, com opção de ouvir e escolher a resposta" loading="lazy" width="1462" height="733"><figcaption>02 / Conhecendo os números</figcaption></figure>
-            <figure class="carousel-slide" aria-hidden="true"><img src="assets/portal-atividades.png" alt="Seleção de atividades: alfabeto, formação de palavras, números, rimas, sílabas e som inicial" loading="lazy" width="1461" height="732"><figcaption>03 / Atividades</figcaption></figure>
-            <figure class="carousel-slide" aria-hidden="true"><img src="assets/portal-acacio-login.jpg" alt="Tela inicial de entrada no Portal de Atividades da Escola Acácio Piedade" loading="lazy" width="1363" height="936"><figcaption>04 / Entrada no portal</figcaption></figure>
-            <figure class="carousel-slide" aria-hidden="true"><img src="assets/portal-acacio-recuperacao.jpg" alt="Tela para solicitar a recuperação de acesso à conta da professora" loading="lazy" width="1363" height="936"><figcaption>05 / Recuperação de senha</figcaption></figure>
-          </div>
-          <div class="carousel-controls"><button type="button" class="carousel-prev" aria-label="Captura anterior">←</button><span class="carousel-count" aria-live="polite">01 / 05</span><button type="button" class="carousel-next" aria-label="Próxima captura">→</button></div>
+    <div class="projects-heading"><div><p class="eyebrow section-label">TRABALHOS SELECIONADOS / 01—06</p><h2 id="projects-title">Projetos que ganham vida<span>.</span></h2></div><p>Selecione um trabalho para explorar a proposta, ver as telas e abrir o projeto completo.</p></div>
+    <div class="showcase" aria-labelledby="showcase-title">
+      <div class="showcase-content">
+        <p class="eyebrow">GALERIA INTERATIVA / 01—06</p>
+        <h3 id="showcase-title">Seis projetos.<br>Seis caminhos.</h3>
+        <p class="showcase-lead">Escolha um trabalho. A prévia, os detalhes e o link acompanham sua seleção.</p>
+        <div class="showcase-tabs" role="group" aria-label="Selecionar projeto na galeria">
+          <button type="button" class="showcase-tab is-active" data-project="0" aria-pressed="true"><span>01</span> Ricardo Lara <span aria-hidden="true">↗</span></button>
+          <button type="button" class="showcase-tab" data-project="1" aria-pressed="false"><span>02</span> Exercícios de Front-end <span aria-hidden="true">↗</span></button>
+          <button type="button" class="showcase-tab" data-project="2" aria-pressed="false"><span>03</span> Peixaria Dinho <span aria-hidden="true">↗</span></button>
+          <button type="button" class="showcase-tab" data-project="3" aria-pressed="false"><span>04</span> Portal Acácio Piedade <span aria-hidden="true">↗</span></button>
+          <button type="button" class="showcase-tab" data-project="4" aria-pressed="false"><span>05</span> Chatbot com IA <span aria-hidden="true">↗</span></button>
+          <button type="button" class="showcase-tab" data-project="5" aria-pressed="false"><span>06</span> Geo Mundo <span aria-hidden="true">↗</span></button>
         </div>
-        <div class="project-body"><p class="project-index">01 <span>EDUCAÇÃO / PORTAL</span></p><h3>Portal Acácio Piedade</h3><p>Um portal de atividades voltado à aprendizagem de crianças em fase de desenvolvimento, com foco no reconhecimento dos números e na formação de palavras.</p><a href="https://portal-acacio-piedade-topaz.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Portal Acácio Piedade em nova aba">Ver projeto <span aria-hidden="true">↗</span></a></div>
-      </article>
-      <article class="project-card">
-        <div class="project-media project-media--shot project-media--binho"><img src="assets/binho-ia.png" alt="Interface do protótipo Binho IA com conversa e campo para perguntar sobre celulares" loading="lazy" width="1477" height="733"></div>
-        <div class="project-body"><p class="project-index">02 <span>CONCEITO / CHATBOT</span></p><h3>Chatbot com IA</h3><p>Protótipo de assistente para explorar uma experiência de atendimento digital em uma loja de celulares.</p><p class="project-disclaimer">Projeto hipotético e independente. Não é um canal oficial da Binho Celulares.</p><a href="https://chat-bot-front-beta.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir protótipo de chatbot em nova aba">Explorar protótipo <span aria-hidden="true">↗</span></a></div>
-      </article>
-      <article class="project-card">
-        <div class="project-media project-media--shot project-media--geo-shot"><img src="assets/geo-mundo.png" alt="Partida do Geo Mundo com mapa das Américas e pergunta de múltipla escolha sobre a capital do Uruguai" loading="lazy" width="1475" height="732"></div>
-        <div class="project-body"><p class="project-index">03 <span>JOGO / GEOGRAFIA</span></p><h3>Geo Mundo</h3><p>Jogo desenvolvido para o TCC que estimula o conhecimento de geografia por meio de locais, vegetação, clima e fusos horários.</p><a href="https://geo-mundo.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir jogo Geo Mundo em nova aba">Jogar Geo Mundo <span aria-hidden="true">↗</span></a></div>
-      </article>
+        <div class="showcase-gallery" id="showcase-gallery" role="group" aria-label="Telas do Portal Acácio Piedade" hidden>
+          <button type="button" data-preview="0" class="is-active" aria-pressed="true"><img src="assets/portal-palavras.png" alt="" width="64" height="46"><span>Palavras</span></button>
+          <button type="button" data-preview="1" aria-pressed="false"><img src="assets/portal-numeros.png" alt="" width="64" height="46"><span>Números</span></button>
+          <button type="button" data-preview="2" aria-pressed="false"><img src="assets/portal-atividades.png" alt="" width="64" height="46"><span>Atividades</span></button>
+          <button type="button" data-preview="3" aria-pressed="false"><img src="assets/portal-acacio-login.jpg" alt="" width="64" height="46"><span>Início</span></button>
+          <button type="button" data-preview="4" aria-pressed="false"><img src="assets/portal-acacio-recuperacao.jpg" alt="" width="64" height="46"><span>Recuperação</span></button>
+        </div>
+      </div>
+      <div class="showcase-visual">
+        <canvas id="showcase-canvas" aria-hidden="true"></canvas>
+        <img id="showcase-fallback" src="assets/ricardo-lara-preview.jpg" alt="Prévia do site Ricardo Lara, com serviços de elétrica e hidráulica" width="1350" height="926">
+        <span class="showcase-visual-label" id="showcase-visual-label" aria-hidden="true">01 / RICARDO LARA</span>
+      </div>
+      <div class="showcase-detail" aria-live="polite">
+        <span id="showcase-category">SERVIÇOS · LANDING PAGE</span>
+        <h4 id="showcase-name">Ricardo Lara</h4>
+        <p id="showcase-description">Uma presença digital para serviços de elétrica e hidráulica, com caminho direto para solicitar orçamento.</p>
+        <p class="showcase-note" id="showcase-note" hidden></p>
+        <div class="showcase-actions"><a id="showcase-link" href="https://ricardolara.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir site Ricardo Lara em nova aba">Abrir projeto <span aria-hidden="true">↗</span></a><span id="showcase-stack">HTML · CSS · JavaScript · GSAP</span></div>
+      </div>
     </div>
     <div class="projects-outro"><p>Tem uma ideia para tirar do papel?</p><a href="#contato">Vamos conversar <span aria-hidden="true">↗</span></a></div>
   </section>

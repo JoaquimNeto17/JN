@@ -96,48 +96,4 @@
     updateWhatsAppState();
   }
 
-  /* Carrossel do Portal Acácio */
-  const carousel = document.querySelector('.portal-carousel');
-
-  if (carousel) {
-    const slides = [...carousel.querySelectorAll('.carousel-slide')];
-    const prev = carousel.querySelector('.carousel-prev');
-    const next = carousel.querySelector('.carousel-next');
-    const count = carousel.querySelector('.carousel-count');
-    let current = Math.max(0, slides.findIndex(slide => slide.classList.contains('is-active')));
-
-    const renderSlide = index => {
-      if (!slides.length) return;
-
-      current = (index + slides.length) % slides.length;
-
-      slides.forEach((slide, slideIndex) => {
-        const active = slideIndex === current;
-        slide.classList.toggle('is-active', active);
-        slide.setAttribute('aria-hidden', String(!active));
-      });
-
-      if (count) {
-        count.textContent =
-          `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
-      }
-    };
-
-    prev?.addEventListener('click', () => renderSlide(current - 1));
-    next?.addEventListener('click', () => renderSlide(current + 1));
-
-    carousel.addEventListener('keydown', event => {
-      if (event.key === 'ArrowLeft') {
-        event.preventDefault();
-        renderSlide(current - 1);
-      }
-
-      if (event.key === 'ArrowRight') {
-        event.preventDefault();
-        renderSlide(current + 1);
-      }
-    });
-
-    renderSlide(current);
-  }
 })();
